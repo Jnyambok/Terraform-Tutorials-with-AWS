@@ -1,5 +1,13 @@
 # Terraform-Tutorials-with-AWS
-This repo contains Terraform reusable code snippets that can be re-used to launch resources
+![image](https://github.com/user-attachments/assets/bf40c6d3-6f07-4334-80cb-22eae714ce23)
+
+![image](https://github.com/user-attachments/assets/24312d8f-99b5-4852-af87-e07cfaf4e845)
+
+
+
+This repo contains Terraform reusable code snippets that can be reused to launch resources.
+
+
 # Deploying an EC2 Instance with Terraform
 
 This README provides the steps to deploy an EC2 instance using the provided Terraform configuration.
@@ -8,9 +16,9 @@ This README provides the steps to deploy an EC2 instance using the provided Terr
 
 Before you begin, ensure you have the following:
 
-* **Terraform installed:** Follow the instructions in this Medium article to set up Terraform: \[Insert your Medium article link here]
+* **Terraform installed:** Follow the instructions in this Medium article to set up Terraform: [here](https://medium.com/towards-artificial-intelligence/building-a-robust-and-efficient-aws-cloud-infrastructure-with-terraform-and-gitlab-ci-cd-925ff592ad46)
 * **AWS Account:** You'll need an active AWS account.
-* **AWS Credentials:** Configure your AWS credentials so Terraform can manage resources in your account. You can do this using environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) or the `aws configure` command.
+* **AWS Credentials:** Configure your AWS credentials so Terraform can manage your account's resources. You can use environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) or the `aws configure` command.
 * **SSH Key Pair:** An SSH key pair is required to connect to the EC2 instance. If you don't have one, create it in the AWS Management Console or using the AWS CLI. **Important:** Store the private key file (`.pem` file) in a secure location, and you'll need its path.
 
 ## Steps to Deploy
