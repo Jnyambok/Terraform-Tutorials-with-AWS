@@ -45,6 +45,7 @@ Here's a breakdown of the code:
 * **`provider "aws"`:** This block configures the AWS provider, which allows Terraform to interact with AWS.
 * **`region = "eu-north-1"`:** Specifies the AWS Region where the resources will be created. In this case, it's the `eu-north-1` (Stockholm) Region. You can change this to another region if needed.
 
+`
     terraform
     resource "aws_instance" "web\_server" {
     ami = "ami-0e5482f75bed66741"
@@ -74,6 +75,7 @@ Here's a breakdown of the code:
     }
     vpc\_security\_group\_ids = [aws\_security\_group.web\_sg.id]
     }
+`
 
 * **`resource "aws_instance" "web_server"`:** This block defines an EC2 instance resource.
     * **`ami = "ami-0e5482f75bed66741"`:** Specifies the Amazon Machine Image (AMI) to use for the instance. AMIs vary by region and operating system. This AMI ID is for an Amazon Linux 2 AMI in the `eu-north-1` region. If you change the region, you'll need to find the appropriate AMI ID for that region. You can find AMIs using the AWS Management Console or the AWS CLI.
@@ -97,7 +99,7 @@ Here's a breakdown of the code:
             * `private_key = file("<your-location-here>")`: The path to your SSH private key file (`.pem` file). **You must replace `<your-location-here>` with the actual path to your key file.** Ensure this file has the correct permissions (e.g., `chmod 400 your-private-key.pem`).
             * `host = self.public_ip`: The hostname or IP address to connect to. `self.public_ip` is a special attribute that refers to the public IP address of the EC2 instance being created.
     * `vpc_security_group_ids = [aws_security_group.web_sg.id]`: Attaches the security group defined in the `aws_security_group` resource to the EC2 instance. This controls network traffic to and from the instance.
-
+`
     terraform
     resource "aws_security_group" "web\_sg" {
     name = "web\_sg"
@@ -108,7 +110,7 @@ Here's a breakdown of the code:
     protocol = "tcp"
     cidr\_blocks = ["0.0.0.0/0"]
     }
-    }
+       `
 
 * **`resource "aws_security_group" "web_sg"`:** This block defines a security group named "web\_sg".
     * **`name = "web_sg"`:** The name of the security group.
