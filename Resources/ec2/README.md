@@ -1,4 +1,5 @@
 # Terraform Configuration for EC2 Instance Deployment
+![Untitled](https://github.com/user-attachments/assets/2b4cadbe-6014-4a9f-bf09-62b903d55853)
 
 This README provides a detailed explanation of the provided Terraform configuration, which deploys an EC2 instance on AWS. It covers the core concepts of EC2 and explains each block of code.
 
